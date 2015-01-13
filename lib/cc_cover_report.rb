@@ -1,7 +1,7 @@
 require "cc_cover_report/version"
 
 class CcCoverReport
-  self.report(repo_key = nil)
+  def self.report(repo_key = nil)
     begin
       repo_key ||= ENV['CC_REPO_KEY']
       if repo_key.present?
@@ -18,6 +18,7 @@ class CcCoverReport
           :repo_key => repo_key,
           :coverage_file => File.new(index_file)
           )
+          puts "Pushed coverage report to CC"
         end
       else
         # No index file found - cannot upload coverage report
