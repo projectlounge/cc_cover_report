@@ -1,6 +1,6 @@
 # CcCoverReport
 
-TODO: Write a gem description
+Capture SimpleCov coverage reports and report these to CC servers for a given commit. Assumes git and SimpleCov are already in use.
 
 ## Installation
 
